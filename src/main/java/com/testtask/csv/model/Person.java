@@ -1,6 +1,10 @@
 package com.testtask.csv.model;
 
+import java.util.Arrays;
+import java.util.UUID;
+
 public class Person {
+    private UUID id;
     private String firstName;
     private String lastName;
     private String email;
@@ -12,19 +16,27 @@ public class Person {
     private boolean isEmployed;
     private String country;
 
-    public Person(String firstName, String lastName, String email, String gender, byte[] image, String price, String paymentMethod, boolean isAuthorized, boolean isEmployed, String country) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.gender = gender;
-        this.image = image;
-        this.price = price;
-        this.paymentMethod = paymentMethod;
-        this.isAuthorized = isAuthorized;
-        this.isEmployed = isEmployed;
-        this.country = country;
+//    public Person(UUID id, String firstName, String lastName, String email, String gender, byte[] image, String price, String paymentMethod, boolean isAuthorized, boolean isEmployed, String country) {
+//        this.id = id;
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//        this.email = email;
+//        this.gender = gender;
+//        this.image = image;
+//        this.price = price;
+//        this.paymentMethod = paymentMethod;
+//        this.isAuthorized = isAuthorized;
+//        this.isEmployed = isEmployed;
+//        this.country = country;
+//    }
+//
+    public UUID getId() {
+        return id;
     }
 
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public String getPaymentMethod() {
         return paymentMethod;
@@ -105,5 +117,19 @@ public class Person {
     public void setPrice(String price) {
         this.price = price;
     }
-
+    @Override
+    public String toString() {
+        return "CsvRowModel{" +
+                "firsName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", gender='" + gender + '\'' +
+                ", image=" + Arrays.toString(image) +
+                ", paymentMethod='" + paymentMethod + '\'' +
+                ", price=" + price +
+                ", isAuthorized=" + isAuthorized +
+                ", isEmployeed=" + isEmployed +
+                ", country='" + country + '\'' +
+                '}';
+    }
 }

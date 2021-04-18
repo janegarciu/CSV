@@ -5,6 +5,6 @@ import java.util.Arrays;
 public class CSVValidator {
     public boolean isValid(String[] row) {
 
-        return Arrays.asList(row).stream().noneMatch(String::isBlank);
+        return Arrays.stream(row).noneMatch(String::isBlank);
     }
 }

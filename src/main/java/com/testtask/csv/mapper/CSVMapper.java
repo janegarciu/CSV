@@ -2,18 +2,22 @@ package com.testtask.csv.mapper;
 
 import com.testtask.csv.model.Person;
 
+import java.util.UUID;
+
 public class CSVMapper {
     public static Person mapPerson(String[] data) {
-        String firstName = data[0];
-        String lastName = data[1];
-        String email = data[2];
-        String gender = data[3];
-        byte[] image = data[4].getBytes();
-        String price = data[6];
-        String paymentMethod = data[5];
-        boolean isAuthorized = Boolean.parseBoolean(data[7]);
-        boolean isEmployed = Boolean.parseBoolean(data[8]);
-        String country = data[9];
-        return new Person(firstName, lastName, email, gender, image, price, paymentMethod, isAuthorized, isEmployed, country);
+        Person person = new Person();
+        person.setId(UUID.randomUUID());
+        person.setFirstName(data[0]);
+        person.setLastName(data[1]);
+        person.setEmail(data[2]);
+        person.setGender(data[3]);
+        person.setImage(data[4].getBytes());
+        person.setPaymentMethod(data[5]);
+        person.setPrice(data[6]);
+        person.setAuthorized(Boolean.parseBoolean(data[7]));
+        person.setEmployed(Boolean.parseBoolean(data[8]));
+        person.setCountry(data[9]);
+        return person;
     }
 }
