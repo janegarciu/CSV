@@ -200,7 +200,7 @@ Valid rows are further inserted into DB and invalid rows are further processed b
 This method calls getPath() method to get path to newly created .csv file for invalid rows to be inserted. It writes each invalid row to a new .csv file.
 
 - getPath() - method accepts rowNumber parameter to be used in .csv file creation. .csv files have the following naming format:
-rowNumber_dd_MM_yyyy_HH_mm_ss_nn.csv and are created under main/resources/export directory.
+rowNumber_dd_MM_yyyy_HH_mm_ss_nn.csv and are created under main/resources/export directory(Please remove example file from export directory before the program is runt).
 
 **CSVValidator**
 
@@ -231,6 +231,7 @@ understand the sequence of actions defined in main method:
 ```
 
 # How to setup
+- Make sure JDK 11.0.4 is set up
 - Make sure pom.xml file is compiled and all the dependencies are present in External Libraries
 - Make sure to copy path to File Handler defined in _**LogHandler**_ class, for this copy main/resources/logs directory's absolute path and paste it in here(ofc in LogHandler class):
 ```

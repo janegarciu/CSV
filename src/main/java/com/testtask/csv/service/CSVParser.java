@@ -68,7 +68,7 @@ public class CSVParser {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH_mm_ss_nn");
 
         final StringBuilder pathBuilder = new StringBuilder();
-        pathBuilder.append("C:\\project_test\\src\\main\\resources\\export\\");
+        pathBuilder.append("C:\\CSV\\src\\main\\resources\\export\\");
         pathBuilder.append(rowNumber + "_");
         pathBuilder.append(LocalDateTime.now().format(format));
         return pathBuilder;

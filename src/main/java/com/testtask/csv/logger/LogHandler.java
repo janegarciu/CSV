@@ -12,7 +12,7 @@ public class LogHandler {
     public static Logger createFileHandler() {
         {
             try {
-                fileHandler = new FileHandler("C:\\project_test\\src\\main\\resources\\logs\\app.log", true);
+                fileHandler = new FileHandler("C:\\CSV\\src\\main\\resources\\logs\\app.log", true);
                 logger.addHandler(fileHandler);
                 if (logger.isLoggable(Level.INFO)) {
                     logger.info("Information message");

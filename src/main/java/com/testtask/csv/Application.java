@@ -11,7 +11,7 @@ public class Application {
         CSVParser parser = new CSVParser(connector);
         connector.openConnection();
         connector.createNewTable();
-        parser.readPersonsFromCSV("C:\\project_test\\src\\main\\resources\\Test.csv");
+        parser.readPersonsFromCSV("C:\\CSV\\src\\main\\resources\\Test.csv");
         connector.closeConnection();
         connector.testDB();
     }
